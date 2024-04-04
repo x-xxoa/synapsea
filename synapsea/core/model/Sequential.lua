@@ -155,7 +155,7 @@ function Sequential.export(model, fileName)
 
 	local f, err = io.open(fileName, "w")
 
-	assert(f, fileName .. ": " .. (err or "nil error"))
+	assert(f, (err or "nil error"))
 
 	f:write("return " .. tableToString(model))
 
