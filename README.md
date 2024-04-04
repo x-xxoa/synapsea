@@ -14,11 +14,13 @@ Synapsea is a simple yet powerful machine learning framework designed for buildi
 
 Synapsea is built from the ground up to be simple, easy to understand and portable with no external libraries, requring only a Lua interpreter.
 
+Synapsea runs entirely on the CPU and is single-threaded, this is a limitation but one that makes Synapsea easy to embed wherever.
+
 ## Notice
 
 While this software is released under the GNU GPL v3, I kindly request that users refrain from using this framework for the creation of chatbots and AI-generated images without explicit permission.
 
-"AI", as large mega-corporations like to call it, is disgusting, corrupt and a serious problem. A good resource to help stop "AI" is [stop.ai](https://stop.ai).
+Also go to [stop.ai](https://stop.ai).
 
 ## Table of Contents
 
