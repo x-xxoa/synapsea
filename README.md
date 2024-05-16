@@ -4,23 +4,18 @@
 
 ### **Note: This is a development release!**
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/license-MIT-blue)](https://www.opensource.org/license/mit)
 [![Lua](https://img.shields.io/badge/Lua-5.4%2B-blueviolet)](https://www.lua.org/)
 [![Release](https://img.shields.io/github/v/release/mochji/synapsea)](https://github.com/mochji/synapsea/releases)
 
 ## Overview
+
 
 Synapsea is a simple yet powerful machine learning framework designed for building, saving, training and running powerful machine learning models.
 
 Synapsea is built from the ground up to be simple, easy to understand and portable with no external libraries, requring only a Lua interpreter.
 
 Synapsea runs entirely on the CPU and is single-threaded, this is a limitation but one that makes Synapsea easy to embed wherever.
-
-## Notice
-
-While this software is released under the GNU GPL v3, I kindly request that users refrain from using this framework for the creation of chatbots and AI-generated images without explicit permission.
-
-Also go to [stop.ai](https://stop.ai).
 
 ## Table of Contents
 
@@ -67,7 +62,10 @@ v2.0.0-development
 2.9
 0.94784643692158
 > input = synapsea.initializers.normalRandom({3, 3}, {mean = 0, sd = 0.1})
-> output = synapsea.layers.flatten{input = input}
+> model = synapsea.Sequential({3, 3}, {"what is this?" = "metadata!"})
+> model:addLayer("flatten")
+> model:build()
+> output = model:forwardPass(input)
 > for a = 1, #output do print(a, output[a]) end
 1       0.12884759243026
 2       0.16374163630011
@@ -79,16 +77,6 @@ v2.0.0-development
 8       -0.14966043873079
 9       0.33041979998093
 ```
-
-For more complex examples, please see [Examples](https://sites.google.com/view/synapsea/api/examples).
-
-## Documentation
-
-For detailed documentation, including API documentation and usage, please see [Documentation](https://sites.google.com/view/synapsea/api/documentation).
-
-## Contributing
-
-Contributions are welcome! If you find any issues or have suggestions, please open an issue or create a pull request. Please also make sure to follow the [Contribution Guidelines](CONTRIBUTING.md).
 
 ## Version Numbering
 
@@ -107,7 +95,7 @@ For example:
 
 ## License
 
-This library is licensed under the GNU GPL v3, see [License](https://www.gnu.org/licenses/gpl-3.0.en.html) for details.
+This library is licensed under the [MIT License](https://www.opensource.org/license/mit).
 
 ## Also
 
